@@ -62,9 +62,6 @@ def startMotor():
 
     GPIO.cleanup()
 
-# init colors
-init()
-
 SERVER_HOST = "192.168.1.35"
 SERVER_PORT = 5002 # server's port
 separator_token = "<SEP>" # we will use this to separate the client name & message
