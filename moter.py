@@ -13,6 +13,8 @@ def runMotor():
     time.sleep(5)
     GPIO.output(motorPin, GPIO.LOW)
     time.sleep(5)
+def destroy():
+    GPIO.cleanup()                      
 
 if __name__ == '__main__':     # Program entrance
     print ('Program is starting...')
