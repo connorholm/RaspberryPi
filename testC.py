@@ -1,21 +1,8 @@
 import socket
 import random
 from threading import Thread
-from datetime import datetime
-from colorama import Fore, init, Back
 
 # init colors
-init()
-
-# set the available colors
-colors = [Fore.BLUE, Fore.CYAN, Fore.GREEN, Fore.LIGHTBLACK_EX, 
-    Fore.LIGHTBLUE_EX, Fore.LIGHTCYAN_EX, Fore.LIGHTGREEN_EX, 
-    Fore.LIGHTMAGENTA_EX, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX, 
-    Fore.LIGHTYELLOW_EX, Fore.MAGENTA, Fore.RED, Fore.WHITE, Fore.YELLOW
-]
-
-# choose a random color for the client
-client_color = random.choice(colors)
 
 # server's IP address
 # if the server is not on this machine, 
@@ -50,8 +37,7 @@ while True:
     if to_send.lower() == 'q':
         break
     # add the datetime, name & the color of the sender
-    date_now = datetime.now().strftime('%Y-%m-%d %H:%M:%S') 
-    to_send = f"{client_color}[{date_now}] {name}{separator_token}{to_send}{Fore.RESET}"
+    to_send = f"{to_send}"
     # finally, send the message
     s.send(to_send.encode())
 
