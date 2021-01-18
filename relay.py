@@ -10,7 +10,7 @@ import time
 
 relayPin = 11     # define the relayPin
 buttonPin = 12    # define the buttonPin
-debounceTime = 50
+debounceTime = 150
 
 def setup():    
     GPIO.setmode(GPIO.BOARD)       
